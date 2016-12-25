@@ -12,7 +12,6 @@ import { CalendarPage } from '../pages/calendar/calendar';
 import { StorePage } from '../pages/store/store';
 import { ProfilePage } from '../pages/profile/profile';
 import { ModalStore } from '../pages/modalstore/modalstore';
-import { CalendarModule } from 'angular2-calendar';
 
 @NgModule({
   declarations: [
@@ -28,8 +27,7 @@ import { CalendarModule } from 'angular2-calendar';
   imports: [
     IonicModule.forRoot(MyApp),
     FormsModule,
-    TextMaskModule,
-    CalendarModule.forRoot()
+    TextMaskModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
