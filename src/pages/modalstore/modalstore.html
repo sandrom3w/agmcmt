@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button block color="dark" clear (click)="dismiss()">
+      <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <h1>{{name}}</h1>
+      <p>Venerável: {{veneravel}}</p>
+      <p>Celular: {{mobile}} - Telefone {{phone}}</p>
+      <p>Email: {{email}}</p>
+      <br>
+      <p>RITO: {{rito}}</p>
+      <p>{{day}}</p>
+      <p>{{hour}}</p>
+      <br>
+      <p>{{address}}, {{number}}</p>
+      <p>{{cep}}</p>
+      <p>{{city}} - {{uf}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

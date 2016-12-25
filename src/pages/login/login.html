@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> Login </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding="true">
+
+  <ion-card style="box-shadow: none;">
+    <img style="width:100%;" src="http://placehold.it/450x250/333399/AAAAAA"/>
+  </ion-card>
+
+  <form [formGroup]="login">
+    <ion-item>
+      <ion-label stacked>Email</ion-label>
+      <ion-input type="email" name="email" formControlName="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Senha</ion-label>
+      <ion-input type="password" name="password" formControlName="password"></ion-input>
+    </ion-item>
+
+    <button style="margin-top: 20px;" ion-button block color="dark" (click)="getDados()">Entrar</button>
+    <button style="font-size: 14px;" ion-button block color="dark" clear (click)="createAccount()">Registre-se</button>
+  </form>
+
+</ion-content>

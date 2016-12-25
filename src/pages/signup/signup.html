@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title> Registro </ion-title>
+  </ion-navbar>
+</ion-header>
+
+  <ion-content padding>
+    <form [formGroup]="register">
+      <ion-list>
+        <ion-item>
+          <ion-label stacked>Nome</ion-label>
+          <ion-input type="text" name="name" formControlName="name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Email</ion-label>
+          <ion-input type="email" name="email" formControlName="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Senha</ion-label>
+          <ion-input type="password" name="password" formControlName="password"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>CIM</ion-label>
+          <ion-input [textMask]="{mask: maskCIM}" [(ngModel)]="myModelCIM" type="text" name="cim" formControlName="cim"> </ion-input>
+        </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Data de Nascimento</ion-label>
+        <ion-datetime displayFormat="DD MMM YYYY" [(ngModel)]="event.month" name="birth" formControlName="birth"></ion-datetime>
+      </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Celular</ion-label>
+          <ion-input [textMask]="{mask: maskPhone}" [(ngModel)]="myModelPhone" type="text" name="phone" formControlName="phone"> </ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Profissão</ion-label>
+          <ion-input type="text" name="profession" formControlName="profession"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Posição</ion-label>
+          <ion-select name="position" formControlName="position">
+            <ion-option selected="true">Aprendiz</ion-option>
+            <ion-option>Acompanhante</ion-option>
+            <ion-option>Mestre</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+    </form>
+    <button ion-button block color="dark" (click)="postDados()">Enviar</button>
+  </ion-content>
