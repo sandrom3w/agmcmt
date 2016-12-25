@@ -1,15 +1,15 @@
 <ion-header>
   <ion-toolbar>
-    <ion-searchbar (ionInput)="onInput()">Procurar</ion-searchbar>
+    <ion-searchbar (ionInput)="onInput($event)">Procurar</ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
   <ion-list>
-    <ion-item *ngFor="let store of storeArray; let i = index"
+    <ion-item *ngFor="let store of storeList; let i = index"
               (click)="logStore(i)">
       <ion-thumbnail item-left>
-        <img src="http://placehold.it/80x80">
+        <img src="http://lorempixel.com/80/80/cats/{{store.id % 10}}">
       </ion-thumbnail>
       <h2>{{store.name}}</h2>
       <p>{{store.address}}</p>
