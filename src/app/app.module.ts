@@ -12,6 +12,8 @@ import { CalendarPage } from '../pages/calendar/calendar';
 import { StorePage } from '../pages/store/store';
 import { ProfilePage } from '../pages/profile/profile';
 import { ModalStore } from '../pages/modalstore/modalstore';
+import { CalendarComponent } from "angular2-fullcalendar/src/calendar/calendar";
+import { FullCalendarComponent } from '../components/full-calendar/full-calendar';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ModalStore } from '../pages/modalstore/modalstore';
     CalendarPage,
     StorePage,
     ProfilePage,
-    ModalStore
+    ModalStore,
+    FullCalendarComponent,
+    CalendarComponent
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -38,7 +42,9 @@ import { ModalStore } from '../pages/modalstore/modalstore';
     CalendarPage,
     StorePage,
     ProfilePage,
-    ModalStore
+    ModalStore,
+    FullCalendarComponent,
+    CalendarComponent
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler},
