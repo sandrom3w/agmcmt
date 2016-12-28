@@ -5,6 +5,7 @@ import { NavController, ToastController} from 'ionic-angular';
 import { AuthService } from '../../providers/auth-service';
 import { SignupPage } from '../signup/signup';
 import { TabsPage } from '../tabs/tabs';
+import { CalendarPage } from '../calendar/calendar';
 
 @Component({
   selector: 'page-login',
@@ -40,7 +41,7 @@ export class LoginPage {
           if(data.success ==1){
             this.dataCache.set('userData', JSON.stringify(data));
             this.postStore();
-            this.nav.push(TabsPage);
+            this.nav.push(CalendarPage);
           }else{
             this.showToast('bottom', data.message);
           }
